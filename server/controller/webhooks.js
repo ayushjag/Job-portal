@@ -3,7 +3,7 @@ import User from "../models/User.js";
 
 export const ClerkWebhooks = async (req, res) => {
     try {
-        const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET);
+        const whook = new Webhook (process.env.CLERK_WEBHOOK_SECRET);
 
         // Verify the webhook signature
         await whook.verify(JSON.stringify(req.body), {

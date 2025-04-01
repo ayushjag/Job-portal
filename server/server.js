@@ -10,14 +10,14 @@ import { ClerkWebhooks } from './controller/Webhooks.js';
 const app = express();
 
 // Connect to DB before starting the server
-connectDB()
+await connectDB()
   .then(() => {
     app.use(cors());
     app.use(express.json());
 
     // Routes
     app.get('/', (req, res) => {
-      res.send('Hello World');
+      res.send('API Working');
     });
 
     app.post('/webhooks', ClerkWebhooks);
