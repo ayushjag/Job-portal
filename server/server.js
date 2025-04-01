@@ -5,6 +5,7 @@ import connectDB from './config/db.js';
 import logger from './logger.js'
 import { ClerkWebhooks } from './controller/Webhooks.js';
 
+
 const app = express();
 
 // Connect to DB before starting the server
