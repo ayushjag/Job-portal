@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import 'dotenv/config.js';
+import 'dotenv/config'
+
 import connectDB from './config/db.js';
 import logger from './logger.js'
 import { ClerkWebhooks } from './controller/Webhooks.js';
